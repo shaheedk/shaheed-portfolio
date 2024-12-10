@@ -1,6 +1,11 @@
+import AOS from "aos";
+import { useEffect } from "react";
 const ActionButtons = () => {
+  useEffect(()=>{
+    AOS.init({duration:1000})
+  })
     return (
-      <div className="flex space-x-6 justify-center mt-8">
+      <div className="flex space-x-6 justify-center mt-8" data-aos="fade-up">
         {/* View My Works Button */}
         <a
           href="#works" // Link to your "Works" section
