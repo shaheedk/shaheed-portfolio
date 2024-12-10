@@ -21,7 +21,9 @@ const About = () => {
 
         {/* Text Section */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-4xl font-bold text-gray-800 mb-6">
+          <h1 className="text-4xl font-bold text-gray-800 mb-6"   data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0">
             About Me
           </h1>
           <div className="text1">
