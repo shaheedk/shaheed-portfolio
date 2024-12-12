@@ -1,6 +1,6 @@
 import { SiInstagram, SiLinkedin, SiGithub } from "react-icons/si";
 import AOS from "aos";
-function SocialLinks() {
+const SocialLinks=()=> {
   return (
     <div className="flex flex-row space-x-6 ml-46 mt-4" data-aos="fade-right">
       <a 
