@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import main from "../../assets/main.png";
 import ActionButtons from "./ActionButtons";
-import { SiInstagram, SiLinkedin, SiGithub } from "react-icons/si";
+import SocialLinks from '../social/SocialLinks'
 import "./hero.css";
 import AOS from "aos";
 
@@ -31,6 +31,7 @@ const HeroPage = () => {
             dynamic websites using the MERN stack.
           </p>
           <ActionButtons data-aos="fade-up" />
+         <SocialLinks/>
         </div>
 
         {/* Image Content */}

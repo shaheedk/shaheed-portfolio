@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import image from '../../assets/aboutImg.png';
 import AOS from "aos";
 import './about.css'
+import SocialLinks from "../social/SocialLinks";
 const About = () => {
   useEffect(()=>{
     AOS.init({duration:1000 })
@@ -17,6 +18,7 @@ const About = () => {
             alt="About Me"
             className="rounded-lg shadow-lg w-full h-auto object-cover"
           />
+          <SocialLinks/>
         </div>
 
         {/* Text Section */}
@@ -27,7 +29,7 @@ const About = () => {
             About Me
           </h1>
           <div className="text1">
-            <p className=" text-lg leading-relaxed mb-4" data-Aos="fade-left">
+            <p className=" text-lg leading-relaxed mb-4" data-aos="fade-left">
             Hi, I’m <span className="font-semibold text-blue-600">Shaheed</span>, a web developer and designer with a passion for crafting 
             responsive, visually striking, and user-friendly digital experiences. With expertise in the MERN stack, I specialize 
             in building modern web applications that combine functionality with intuitive design.
@@ -46,6 +48,7 @@ const About = () => {
           
         </div>
       </div>
+      
     </section>
   );
 };
