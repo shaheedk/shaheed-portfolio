@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiNodedotjs, SiMongodb, SiGithub, SiTailwindcss } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiNodedotjs, SiMongodb,  SiTailwindcss } from "react-icons/si";
+import {FaGitAlt} from 'react-icons/fa';
 import Aos from "aos";
 const Skills = () => {
   useEffect(()=>{
@@ -12,7 +13,7 @@ const Skills = () => {
     { name: "React.js", icon: <SiReact className="text-blue-400" /> },
     { name: "Node.js", icon: <SiNodedotjs className="text-green-600" /> },
     { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-    { name: "GitHub", icon: <SiGithub className="text-gray-700" /> },
+    { name: "Git", icon: <FaGitAlt className="text-red-500" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-600" /> },
   ];
 

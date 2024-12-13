@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import image from '../../assets/aboutImg.png';
 import AOS from "aos";
-import './about.css'
+
 import SocialLinks from "../social/SocialLinks";
 const About = () => {
   useEffect(()=>{
