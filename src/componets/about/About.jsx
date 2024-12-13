@@ -8,7 +8,7 @@ const About = () => {
     AOS.init({duration:1000 })
   })
   return (
-    <section className=" bg-gray-50 text-gray-800 py-16 px-6">
+    <section className=" bg-gray-50 text-gray-800 py-16 px-6" id="about">
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row items-center lg:items-start gap-12">
         {/* Image Section */}
         <div className="w-full lg:w-1/2">

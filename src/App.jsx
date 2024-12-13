@@ -10,7 +10,7 @@ function App() {
   return (
     <>
 
-{/* <Nav/> */}
+<Nav/>
  <HeroPage/> 
 <About/>
 <Skills></Skills>
