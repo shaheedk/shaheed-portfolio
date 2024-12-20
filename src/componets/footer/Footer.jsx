@@ -9,9 +9,13 @@ const Footer = () => {
       <div className="container mx-auto px-4 text-center">
         {/* Heading */}
         <h2 className="text-3xl font-semibold mb-4">Thank You for Visiting!</h2>
-        <p className="text-lg mb-6">
+        <p className="text-lg mb-4">
           Feel free to reach out or connect with me on my social media platforms.
         </p>
+        <p className="text-lg ">
+        Email: <a href="sheheedk07@gmail.com" className="text-teal-400 hover:underline">sheheedk07@gmail.com</a>
+        </p>
+       
 
 
      
