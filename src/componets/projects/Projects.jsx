@@ -8,7 +8,7 @@ const projects = [
     title: "New Light",
     description:
       "Static business website created with modern web technologies.",
-    link: "https://github.com/shaheedk/New-light",
+    link: "https://newlights.netlify.app/",
     image: projectOne,
   },
   {

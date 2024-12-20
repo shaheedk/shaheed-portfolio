@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import main from "../../assets/main.png";
 import ActionButtons from "./ActionButtons";
 import SocialLinks from '../social/SocialLinks'
-import "./hero.css";
+
 import AOS from "aos";
 
 const HeroPage = () => {
@@ -36,10 +36,12 @@ const HeroPage = () => {
 
         {/* Image Content */}
         <div className="w-full lg:w-1/2 mb-8 lg:mb-0" data-aos="fade-left">
-          <div className="image-container">
-            <img src={main} alt="Hero" className="image" />
-          </div>
-        </div>
+  <div className="relative w-56 h-56 lg:w-96 lg:h-96 mx-auto lg:mx-0 rounded-full overflow-hidden">
+    <img src={main} alt="Hero" className="w-full h-full object-cover" />
+  </div>
+</div>
+
+
       </div>
 
       {/* Background Shapes */}
