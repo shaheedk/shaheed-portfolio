@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,35 +8,55 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const navLinkClasses = ({ isActive }) =>
-    `hover:text-teal-400 transition-colors duration-300 ${
-      isActive ? 'text-teal-400 font-bold' : ''
-    }`;
-
   return (
     <header className="bg-gray-100 text-gray-900 shadow-md">
       {/* Navbar container */}
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo or brand name */}
+        {/* Logo or brand name (if any) */}
         <div className="text-2xl font-semibold hover:text-emerald-400">Shaheed</div>
 
         {/* Desktop menu */}
         <div className="hidden md:flex space-x-8">
-          <NavLink to="/" className={navLinkClasses}>
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="hover:text-teal-400 transition-colors duration-300 cursor-pointer"
+          >
             Home
-          </NavLink>
-          <NavLink to="/about" className={navLinkClasses}>
+          </Link>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="hover:text-teal-400 transition-colors duration-300 cursor-pointer"
+          >
             About
-          </NavLink>
-          <NavLink to="/projects" className={navLinkClasses}>
+          </Link>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={500}
+            className="hover:text-teal-400 transition-colors duration-300 cursor-pointer"
+          >
             Projects
-          </NavLink>
-          <NavLink to="/skills" className={navLinkClasses}>
+          </Link>
+          <Link
+            to="skills"
+            smooth={true}
+            duration={500}
+            className="hover:text-teal-400 transition-colors duration-300 cursor-pointer"
+          >
             Skills
-          </NavLink>
-          <NavLink to="/contact" className={navLinkClasses}>
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="hover:text-teal-400 transition-colors duration-300 cursor-pointer"
+          >
             Contact
-          </NavLink>
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -61,21 +81,51 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800 bg-opacity-90 backdrop-blur-lg p-6 text-white py-4">
           <div className="flex flex-col items-center space-y-4">
-            <NavLink to="/home" className={navLinkClasses}>
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              className="text-lg hover:text-teal-400 cursor-pointer"
+              onClick={toggleMenu}
+            >
               Home
-            </NavLink>
-            <NavLink to="/about" className={navLinkClasses}>
+            </Link>
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              className="text-lg hover:text-teal-400 cursor-pointer"
+              onClick={toggleMenu}
+            >
               About
-            </NavLink>
-            <NavLink to="/projects" className={navLinkClasses}>
+            </Link>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="text-lg hover:text-teal-400 cursor-pointer"
+              onClick={toggleMenu}
+            >
               Projects
-            </NavLink>
-            <NavLink to="/skills" className={navLinkClasses}>
+            </Link>
+            <Link
+              to="skills"
+              smooth={true}
+              duration={500}
+              className="text-lg hover:text-teal-400 cursor-pointer"
+              onClick={toggleMenu}
+            >
               Skills
-            </NavLink>
-            <NavLink to="/contact" className={navLinkClasses}>
+            </Link>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="text-lg hover:text-teal-400 cursor-pointer"
+              onClick={toggleMenu}
+            >
               Contact
-            </NavLink>
+            </Link>
           </div>
         </div>
       )}
