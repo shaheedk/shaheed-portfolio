@@ -8,7 +8,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-900 text-white shadow-md">
+    <header className="bg-gray-100 text-gray-900 shadow-md">
       {/* Navbar container */}
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo or brand name (if any) */}
