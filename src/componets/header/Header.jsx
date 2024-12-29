@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,46 +16,11 @@ const Header = () => {
 
         {/* Desktop menu */}
         <div className="hidden md:flex space-x-8">
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            className="hover:text-teal-400 transition-colors duration-300 cursor-pointer"
-          >
-            Home
-          </Link>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            className="hover:text-teal-400 transition-colors duration-300 cursor-pointer"
-          >
-            About
-          </Link>
-          <Link
-            to="projects"
-            smooth={true}
-            duration={500}
-            className="hover:text-teal-400 transition-colors duration-300 cursor-pointer"
-          >
-            Projects
-          </Link>
-          <Link
-            to="skills"
-            smooth={true}
-            duration={500}
-            className="hover:text-teal-400 transition-colors duration-300 cursor-pointer"
-          >
-            Skills
-          </Link>
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            className="hover:text-teal-400 transition-colors duration-300 cursor-pointer"
-          >
-            Contact
-          </Link>
+          <a href="#home" className="hover:text-teal-400 transition-colors duration-300">Home</a>
+          <a href="#about" className="hover:text-teal-400 transition-colors duration-300">About</a>
+          <a href="#projects" className="hover:text-teal-400 transition-colors duration-300">Projects</a>
+          <a href="#skills" className="hover:text-teal-400 transition-colors duration-300">Skills</a>
+          <a href="#contact" className="hover:text-teal-400 transition-colors duration-300">Contact</a>
         </div>
 
         {/* Mobile menu button */}
@@ -81,51 +45,11 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800 bg-opacity-90 backdrop-blur-lg p-6 text-white py-4">
           <div className="flex flex-col items-center space-y-4">
-            <Link
-              to="home"
-              smooth={true}
-              duration={500}
-              className="text-lg hover:text-teal-400 cursor-pointer"
-              onClick={toggleMenu}
-            >
-              Home
-            </Link>
-            <Link
-              to="about"
-              smooth={true}
-              duration={500}
-              className="text-lg hover:text-teal-400 cursor-pointer"
-              onClick={toggleMenu}
-            >
-              About
-            </Link>
-            <Link
-              to="projects"
-              smooth={true}
-              duration={500}
-              className="text-lg hover:text-teal-400 cursor-pointer"
-              onClick={toggleMenu}
-            >
-              Projects
-            </Link>
-            <Link
-              to="skills"
-              smooth={true}
-              duration={500}
-              className="text-lg hover:text-teal-400 cursor-pointer"
-              onClick={toggleMenu}
-            >
-              Skills
-            </Link>
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              className="text-lg hover:text-teal-400 cursor-pointer"
-              onClick={toggleMenu}
-            >
-              Contact
-            </Link>
+            <a href="#home" className="text-lg hover:text-teal-400">Home</a>
+            <a href="#about" className="text-lg hover:text-teal-400">About</a>
+            <a href="#projects" className="text-lg hover:text-teal-400">Projects</a>
+            <a href="#skills" className="text-lg hover:text-teal-400">Skills</a>
+            <a href="#contact" className="text-lg hover:text-teal-400">Contact</a>
           </div>
         </div>
       )}
