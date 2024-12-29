@@ -1,82 +1,59 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from 'react';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-transparent" : "bg-gray-900"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <a href="/" className="text-white text-xl font-bold">
-              Shaheed's Portfolio
-            </a>
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <a
-                href="#about"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                About
-              </a>
-              <a
-                href="#projects"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Projects
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-          <div className="-mr-2 flex md:hidden">
-            <button
-              type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
+    <header className="bg-gray-900 text-white shadow-md">
+      {/* Navbar container */}
+      <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo or brand name (if any) */}
+        <div className="text-2xl font-semibold hover:text-emerald-400">Shaheed</div>
+
+        {/* Desktop menu */}
+        <div className="hidden md:flex space-x-8">
+          <a href="#home" className="hover:text-teal-400 transition-colors duration-300">Home</a>
+          <a href="#about" className="hover:text-teal-400 transition-colors duration-300">About</a>
+          <a href="#projects" className="hover:text-teal-400 transition-colors duration-300">Projects</a>
+          <a href="#skills" className="hover:text-teal-400 transition-colors duration-300">Skills</a>
+          <a href="#contact" className="hover:text-teal-400 transition-colors duration-300">Contact</a>
+        </div>
+
+        {/* Mobile menu button */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu} className="text-white focus:outline-none">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
         </div>
       </div>
-    </nav>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-gray-800 bg-opacity-90 backdrop-blur-lg p-6 text-white py-4">
+          <div className="flex flex-col items-center space-y-4">
+            <a href="#home" className="text-lg hover:text-teal-400">Home</a>
+            <a href="#about" className="text-lg hover:text-teal-400">About</a>
+            <a href="#projects" className="text-lg hover:text-teal-400">Projects</a>
+            <a href="#skills" className="text-lg hover:text-teal-400">Skills</a>
+            <a href="#contact" className="text-lg hover:text-teal-400">Contact</a>
+          </div>
+        </div>
+      )}
+    </header>
   );
 };
 

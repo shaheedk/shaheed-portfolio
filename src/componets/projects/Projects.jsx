@@ -31,7 +31,7 @@ const Projects = () => {
     Aos.init({ duration: 1200 });
   });
   return (
-    <section className="py-16 bg-gray-100" id="works">
+    <section className="py-16 bg-gray-100" id="projects">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-semibold text-center text-gray-800 mb-12">
           My works

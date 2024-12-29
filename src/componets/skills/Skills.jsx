@@ -23,7 +23,7 @@ const Skills = () => {
         <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
           My Skills
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6" data-Aos="fade-up">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-up">
           {skills.map((skill, index) => (
             <div
               key={index}

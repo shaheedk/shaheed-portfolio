@@ -8,7 +8,7 @@ const ActionButtons = () => {
       <div className="flex space-x-6 justify-center mt-8" data-aos="fade-up">
         {/* View My Works Button */}
         <a
-          href="#works" // Link to your "Works" section
+          href="#projects" // Link to your "Works" section
           className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition-colors"
         >
           View My Works
