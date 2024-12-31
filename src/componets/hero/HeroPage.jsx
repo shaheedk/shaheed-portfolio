@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import main from "../../assets/main.png";
 import ActionButtons from "./ActionButtons";
-import SocialLinks from '../social/SocialLinks'
+import SocialLinks from '../social/SocialLinks';
 
 import AOS from "aos";
 
