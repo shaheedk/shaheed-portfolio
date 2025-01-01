@@ -7,21 +7,21 @@ const SocialLinks=()=> {
         href="https://www.instagram.com/shaheed_7_" 
          
         rel="noopener noreferrer"
-        className=" hover:text-pink-600 transition-colors duration-300">
+        className=" text-gray-500 hover:text-pink-600 transition-colors duration-300">
         <SiInstagram size={20} />
       </a>
       <a 
         href="https://www.linkedin.com/in/shaheed-k-690010317" 
         target="_blank" 
         rel="noopener noreferrer"
-        className=" hover:text-blue-600 transition-colors duration-300">
+        className=" text-gray-500 hover:text-blue-600 transition-colors duration-300">
         <SiLinkedin size={20} />
       </a>
       <a 
         href="https://github.com/shaheedk" 
         target="_blank" 
         rel="noopener noreferrer"
-        className=" hover:text-gray-800 transition-colors duration-300">
+        className=" text-gray-500 hover:text-gray-800 transition-colors duration-300">
         <SiGithub size={22} />
       </a>
     </div>

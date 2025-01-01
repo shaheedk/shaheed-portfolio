@@ -4,7 +4,7 @@ import SocialLinks from '../social/SocialLinks';
 const Footer = () => {
   return (
 
-    <footer className="bg-gray-900 text-gray-100 py-5 ">
+    <footer className="bg-gray-800 text-gray-100 py-5 ">
        <SocialLinks/>
       <div className="container mx-auto px-4 text-center">
         {/* Heading */}
