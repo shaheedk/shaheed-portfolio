@@ -17,9 +17,9 @@ const HeroPage = () => {
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h1
             className="text-4xl md:text-6xl font-bold text-gray-800 mb-4"
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-offset="0"
+            data-aos="fade-down"
+           
+          
           >
             Hi, I'm <span className="text-teal-400">Shaheed</span>
           </h1>
