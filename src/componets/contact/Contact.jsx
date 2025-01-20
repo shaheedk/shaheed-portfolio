@@ -45,7 +45,6 @@ const Contact = () => {
       className="flex items-center justify-center min-h-screen bg-gradient-to-br bg-white"
       id="contact"
     >
-    
       <div
         className="max-w-lg w-full p-6 bg-gradient-to-br from-blue-200 to-blue-100 shadow-xl rounded-xl"
         data-aos="fade-up"
