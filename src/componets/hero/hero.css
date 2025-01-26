@@ -1,0 +1,11 @@
+.main{
+    animation: float 5s ease-in-out infinite;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
