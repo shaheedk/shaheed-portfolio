@@ -15,7 +15,7 @@ const HeroPage = () => {
     <section className="relative bg-white" id="hero">
       <div className="container mx-auto px-4 py-20 flex flex-col-reverse lg:flex-row items-center">
         {/* Text Content */}
-        <div className="w-full lg:w-1/2 text-center ">
+        <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h1
             className="text-4xl md:text-6xl font-bold text-gray-800 mb-4"
             data-aos="fade-down"
