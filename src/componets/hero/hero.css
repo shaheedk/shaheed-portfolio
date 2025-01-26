@@ -1,6 +1,8 @@
 .main{
     animation: float 5s ease-in-out infinite;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 5px 20px rgb(1, 255, 255); 
+    margin-left: auto;
+    margin-right: 100px;
 }
 
 @keyframes float {
