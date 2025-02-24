@@ -10,10 +10,10 @@ const HeroPage = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
-
+  var a=10
   return (
-    <section className="relative bg-white" id="hero">
-      <div className="container mx-auto px-4 py-20 flex flex-col-reverse lg:flex-row items-center">
+    <section className=" relative bg-white" id="home">
+      <div className="container mx-auto px-4 py-20 flex flex-col-reverse lg:flex-row items-center" >
         {/* Text Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h1
@@ -31,6 +31,7 @@ const HeroPage = () => {
           </p>
           <ActionButtons data-aos="fade-up" />
           <SocialLinks />
+    
         </div>
 
         {/* Image Content */}
