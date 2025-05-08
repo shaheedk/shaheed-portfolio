@@ -1,20 +1,22 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/layout/Header";
-import Home from "./pages/Home";
-import Skills from "./pages/Skills";
-import Services from "./pages/Services";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import Preloader from "./common/Preloader";
+
+// Lazy-loaded pages
+const Home = lazy(() => import("./pages/Home"));
+const Skills = lazy(() => import("./pages/Skills"));
+const Services = lazy(() => import("./pages/Services"));
+const Projects = lazy(() => import("./pages/Projects"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setFadeOut(true), 2500); // Start fading after 2.5s
-    const timer2 = setTimeout(() => setLoading(false), 3000); // Remove after 3s
+    const timer1 = setTimeout(() => setFadeOut(true), 2500);
+    const timer2 = setTimeout(() => setLoading(false), 3000);
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
@@ -28,7 +30,7 @@ const App = () => {
       <div className="w-full flex justify-center">
         <Header />
       </div>
-      <div>
+      <Suspense fallback={<Preloader fadeOut={false} />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/skills" element={<Skills />} />
@@ -36,7 +38,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
+      </Suspense>
     </div>
   );
 };
