@@ -5,20 +5,36 @@ import Skills from "./pages/Skills";
 import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import { useEffect, useState } from "react";
+import Preloader from "./common/Preloader";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    const timer1 = setTimeout(() => setFadeOut(true), 2500); // Start fading after 2.5s
+    const timer2 = setTimeout(() => setLoading(false), 3000); // Remove after 3s
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
+  }, []);
+
+  if (loading) return <Preloader fadeOut={fadeOut} />;
+
   return (
     <div className="relative z-10 h-full w-full flex flex-col bg-black">
-      <div className="w-full flex  justify-center">
+      <div className="w-full flex justify-center">
         <Header />
       </div>
       <div>
         <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </div>

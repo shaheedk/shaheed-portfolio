@@ -4,7 +4,7 @@ import { FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="relative">
+    <div>
       <video
         autoPlay
         muted
