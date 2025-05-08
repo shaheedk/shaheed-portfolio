@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
           <p className="mt-4">Or</p>
           <p className="my-2">
-            {" "}
+          
             <FaEnvelope size={25} className="inline mx-2 " />
             <span className="text-[19px]"> sheheedk07@gmail.com</span>
           </p>
