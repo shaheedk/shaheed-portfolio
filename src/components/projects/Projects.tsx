@@ -28,7 +28,7 @@ const Projects = () => {
                 alt={project.title}
                 className="w-full h-52 object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/20 bg-opacity-50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                 {(project.live || project.github) && (
                   <div className="flex gap-4">
                     {project.live && (
