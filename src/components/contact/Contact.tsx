@@ -103,7 +103,7 @@ const Contact = () => {
           )}
         </form>
       </div>
-      <footer className="text-center text-sm text-gray-500 py-4">
+      <footer className="text-center text-sm text-gray-400 py-4">
       © 2025 Shaheed. All rights reserved.
     </footer>
     </div>
