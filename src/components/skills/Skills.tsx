@@ -63,7 +63,7 @@ const Skills = () => {
         </div>
          {/* sub heading */}
          <div className="mt-12 w-full flex flex-col items-center justify-center max-w-xl">
-          <p className="text-xl font-bold mb-2">Backend & Databases</p>
+          <p className="text-xl font-bold mb-2">Tools & Libraries</p>
           <hr className="bg-yellow-600 h-0.5 w-24 border-none" />
         </div>
 
