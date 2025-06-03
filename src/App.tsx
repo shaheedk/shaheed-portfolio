@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/layout/Header";
 import { useEffect, useState, lazy, Suspense } from "react";
 import Preloader from "./common/Preloader";
+import Robo from "./components/Robo";
 
 // Lazy-loaded pages
 const Home = lazy(() => import("./pages/Home"));
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Suspense>
+      <Robo/>
     </div>
   );
 };
