@@ -18,11 +18,9 @@ import {
 } from "react-icons/si";
 import type { ReactElement } from "react";
 import { FaGitAlt } from "react-icons/fa";
-import { FaRobot } from 'react-icons/fa';
+
 import { MdEmail } from "react-icons/md";
 import { FiShield } from "react-icons/fi";
-
-import { assets } from "../assets/assets";
 
 type Skill = {
   name: string;
