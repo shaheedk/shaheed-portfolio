@@ -18,9 +18,11 @@ import {
 } from "react-icons/si";
 import type { ReactElement } from "react";
 import { FaGitAlt } from "react-icons/fa";
-
+import { FaRobot } from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
 import { FiShield } from "react-icons/fi";
+
+import { assets } from "../assets/assets";
 
 type Skill = {
   name: string;
@@ -49,6 +51,13 @@ export const libraries: Skill[] = [
   { name: "Redux", icon: <SiRedux className="text-[#0072c6]" /> },
   { name: "Nodemon", icon: <SiNodemon className="text-green-500" /> },
   { name: "JWT", icon: <FiShield className="text-[#4B5563]" /> },
+  { name: "V0", icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="20" height="20" rx="4" fill="#8C8CA1"/>
+  <rect x="5" y="5" width="14" height="5" rx="1" fill="white"/>
+  <rect x="5" y="12" width="5" height="7" rx="1" fill="white"/>
+  <rect x="12" y="12" width="7" height="7" rx="1" fill="white"/>
+</svg>},
+
 ];
 
 export const deploy: Skill[] = [

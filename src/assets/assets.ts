@@ -1,4 +1,4 @@
-import main from './main1.png'
+import main from './main1.jpeg'
 import bg from './bg.mp4'
 import developer from './developer.svg'
 import js from './js.png'
@@ -9,6 +9,7 @@ import project2 from './project2.png'
 import project3 from './project3.png'
 import netflix from './netflix.png'
 import divtube from './dvtube.png'
+import v0 from './v0.svg'
 export const assets={
     main,
     bg,
@@ -20,6 +21,7 @@ export const assets={
     project2,
     project3,
     netflix,
-    divtube
+    divtube,
+    v0
 }
 
